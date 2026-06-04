@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://b0lavs4kt68lg"]
+
+[ext_resource type="Script" uid="uid://cw682fugk0wn5" path="res://win_screen.gd" id="1_l2arl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_731nq"]
+bg_color = Color(0.8, 0.51386666, 0.20799999, 0.64705884)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2arl"]
+bg_color = Color(0.8, 0.5137255, 0.20784314, 0.64705884)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmwda"]
+bg_color = Color(0.8, 0.5137255, 0.20784314, 0.64705884)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="WinScreen" type="Control" unique_id=2093747938]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_l2arl")
+
+[node name="Label" type="Label" parent="." unique_id=974757346]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 238.0
+offset_right = 627.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.3071, 0.577265, 0.83, 1)
+theme_override_font_sizes/font_size = 45
+text = "WINNER"
+
+[node name="Button" type="Button" parent="." unique_id=1408329919]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 330.0
+offset_right = 630.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(0.22080001, 0.6766399, 0.96, 1)
+theme_override_colors/font_pressed_color = Color(0.21960784, 0.6784314, 0.9607843, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.29803923, 0.21960784, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_731nq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l2arl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_wmwda")
+text = "RESTART"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

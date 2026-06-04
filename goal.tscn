@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dbe7egxcj0w42"]
+
+[ext_resource type="Script" uid="uid://byqysa1ss3gpy" path="res://goal.gd" id="1_0qle8"]
+[ext_resource type="Texture2D" uid="uid://cwen00e414fsb" path="res://water_balloon.png" id="1_6k3qi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qle8"]
+radius = 48.0
+height = 128.73553
+
+[node name="Goal" type="Area2D" unique_id=1713615294]
+position = Vector2(344, 182)
+script = ExtResource("1_0qle8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=41493526]
+position = Vector2(530, 150)
+scale = Vector2(0.15532543, 0.15685597)
+texture = ExtResource("1_6k3qi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2147000051]
+position = Vector2(533, 155)
+scale = Vector2(1, 0.8233936)
+shape = SubResource("CapsuleShape2D_0qle8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

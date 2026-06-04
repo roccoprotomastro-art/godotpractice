@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://d3as3336dn2hr" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cuus7283sdaxr" path="res://platform.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://dbe7egxcj0w42" path="res://goal.tscn" id="3_h2yge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
 distance = -580.0
@@ -21,6 +20,3 @@ position = Vector2(389, 489)
 
 [node name="Platform2" parent="." unique_id=1306413473 instance=ExtResource("2_0xm2m")]
 position = Vector2(752, 321)
-
-[node name="Goal" parent="." unique_id=1713615294 instance=ExtResource("3_h2yge")]
-position = Vector2(462, 109)
