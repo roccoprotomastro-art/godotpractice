@@ -1,15 +1,23 @@
 [gd_scene format=3 uid="uid://btmugdosh4r23"]
 
+[ext_resource type="Texture2D" uid="uid://1kkmbvjlduqo" path="res://pixil-frame-0.png" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://d3as3336dn2hr" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cuus7283sdaxr" path="res://platform.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dbe7egxcj0w42" path="res://goal.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dxr606k6tulnw" path="res://enemy.tscn" id="5_lquwl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
 distance = -580.0
 
 [node name="Main" type="Node2D" unique_id=59198955]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1446358063]
+position = Vector2(606, 316.99997)
+scale = Vector2(12.759999, 6.6599994)
+texture = ExtResource("1_1bvp3")
+
 [node name="Player" parent="." unique_id=1595312925 instance=ExtResource("1_ig7tw")]
+position = Vector2(-485, 45)
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1657374247]
 
@@ -17,10 +25,19 @@ distance = -580.0
 shape = SubResource("WorldBoundaryShape2D_ig7tw")
 
 [node name="Platform" parent="." unique_id=1403855211 instance=ExtResource("2_0xm2m")]
-position = Vector2(389, 489)
+position = Vector2(437, 558)
+
+[node name="Platform4" parent="." unique_id=1294699019 instance=ExtResource("2_0xm2m")]
+position = Vector2(384, 199)
+
+[node name="Platform3" parent="." unique_id=1961831368 instance=ExtResource("2_0xm2m")]
+position = Vector2(15, 133)
 
 [node name="Platform2" parent="." unique_id=1306413473 instance=ExtResource("2_0xm2m")]
-position = Vector2(752, 321)
+position = Vector2(831, 369)
 
 [node name="Goal" parent="." unique_id=1713615294 instance=ExtResource("3_h2yge")]
-position = Vector2(462, 109)
+position = Vector2(-332, -87)
+
+[node name="Enemy" parent="." unique_id=2051698416 instance=ExtResource("5_lquwl")]
+position = Vector2(321, 299)

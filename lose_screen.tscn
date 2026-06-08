@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bk5g0fedqeo11"]
+
+[ext_resource type="Script" uid="uid://cqvd8engkhrwr" path="res://lose_screen.gd" id="1_cbtnu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deucp"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbtnu"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3ym8"]
+bg_color = Color(0.64, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="lose_screen" type="Control" unique_id=1509484184]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cbtnu")
+
+[node name="Label" type="Label" parent="." unique_id=1026809504]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 194.0
+offset_right = 653.0
+offset_bottom = 257.0
+theme_override_colors/font_color = Color(0.8055549, 0.21260199, 0.1599972, 1)
+theme_override_font_sizes/font_size = 45
+text = "You Lost"
+
+[node name="Button" type="Button" parent="." unique_id=1840047638]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 261.0
+offset_right = 617.0
+offset_bottom = 304.0
+theme_override_colors/font_color = Color(0.88, 0.25520003, 0.25520003, 1)
+theme_override_colors/font_pressed_color = Color(0.8784314, 0.25490198, 0.25490198, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_deucp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cbtnu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h3ym8")
+text = "Try Again"
