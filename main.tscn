@@ -7,37 +7,39 @@
 [ext_resource type="PackedScene" uid="uid://dxr606k6tulnw" path="res://enemy.tscn" id="5_lquwl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
-distance = -580.0
+normal = Vector2(0.009779483, -0.9999522)
+distance = -584.0112
 
 [node name="Main" type="Node2D" unique_id=59198955]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1446358063]
-position = Vector2(606, 316.99997)
+[node name="Background" type="Sprite2D" parent="." unique_id=1446358063]
+position = Vector2(602.00006, 328)
 scale = Vector2(12.759999, 6.6599994)
 texture = ExtResource("1_1bvp3")
 
 [node name="Player" parent="." unique_id=1595312925 instance=ExtResource("1_ig7tw")]
-position = Vector2(-485, 45)
+position = Vector2(-505, 135)
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1657374247]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=593430661]
+position = Vector2(3, 59)
 shape = SubResource("WorldBoundaryShape2D_ig7tw")
 
 [node name="Platform" parent="." unique_id=1403855211 instance=ExtResource("2_0xm2m")]
-position = Vector2(437, 558)
-
-[node name="Platform4" parent="." unique_id=1294699019 instance=ExtResource("2_0xm2m")]
-position = Vector2(384, 199)
+position = Vector2(410, 610)
 
 [node name="Platform3" parent="." unique_id=1961831368 instance=ExtResource("2_0xm2m")]
-position = Vector2(15, 133)
+position = Vector2(44, 200)
 
 [node name="Platform2" parent="." unique_id=1306413473 instance=ExtResource("2_0xm2m")]
-position = Vector2(831, 369)
+position = Vector2(749, 359)
 
 [node name="Goal" parent="." unique_id=1713615294 instance=ExtResource("3_h2yge")]
-position = Vector2(-332, -87)
+position = Vector2(-382, -12)
 
 [node name="Enemy" parent="." unique_id=2051698416 instance=ExtResource("5_lquwl")]
-position = Vector2(321, 299)
+position = Vector2(372, 288)
+
+[node name="Enemy2" parent="." unique_id=130863477 instance=ExtResource("5_lquwl")]
+position = Vector2(719, 36)

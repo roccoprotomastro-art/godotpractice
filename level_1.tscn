@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c8lrlcqtdsihm"]
+
+[ext_resource type="Script" uid="uid://dfthv6wqm58qp" path="res://level_1.gd" id="1_3hls8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hls8"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbghi"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hn12h"]
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[node name="Level 1" type="Node2D" unique_id=1112457667]
+script = ExtResource("1_3hls8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=378389491]
+offset_left = -15.0
+offset_right = 1156.0
+offset_bottom = 653.0
+color = Color(0.23520002, 0.44632003, 0.56, 1)
+
+[node name="Button" type="Button" parent="." unique_id=50588900]
+offset_left = 481.0
+offset_top = 342.0
+offset_right = 664.0
+offset_bottom = 401.0
+theme_override_colors/font_color = Color(0.88, 0.35199997, 0.35199997, 1)
+theme_override_colors/font_pressed_color = Color(0.8784314, 0.34509805, 0.34509805, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxFlat_3hls8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hbghi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hn12h")
+text = "Menu"
+
+[node name="Label" type="Label" parent="." unique_id=2065322348]
+offset_left = 435.0
+offset_top = 283.0
+offset_right = 713.0
+offset_bottom = 325.0
+theme_override_font_sizes/font_size = 30
+text = "Click to go to Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

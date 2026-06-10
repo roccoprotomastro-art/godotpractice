@@ -51,3 +51,5 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_deucp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cbtnu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_h3ym8")
 text = "Try Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

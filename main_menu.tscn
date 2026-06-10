@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://blkaetxrf6xa2"]
+
+[ext_resource type="Script" uid="uid://cmhr4vtpnepk1" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="FontFile" uid="uid://hgexvv16odxi" path="res://FrontLines.otf" id="2_7vrkn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[node name="MainMenu" type="Control" unique_id=1485761740]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_06t4h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1475783917]
+layout_mode = 0
+offset_left = -4.0
+offset_right = 1162.0
+offset_bottom = 658.0
+color = Color(0.34560004, 0.61392003, 0.72, 1)
+
+[node name="Button" type="Button" parent="." unique_id=546489134]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 380.0
+offset_right = 660.0
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(0.88, 0.3432, 0.3432, 1)
+theme_override_colors/font_pressed_color = Color(0.8784314, 0.34509805, 0.34509805, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.2477718, 0.6719572, 0.9226063, 1)
+theme_override_colors/icon_pressed_color = Color(0.8501386, 0.91355187, 0.9083697, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxFlat_06t4h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+text = "START"
+
+[node name="Label" type="Label" parent="." unique_id=1650834595]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 140.0
+offset_right = 1047.0
+offset_bottom = 287.0
+theme_override_colors/font_color = Color(0.1151518, 0.29711333, 0.4474504, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 107
+text = "Frontline"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
